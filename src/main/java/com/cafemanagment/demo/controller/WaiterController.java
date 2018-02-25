@@ -35,7 +35,7 @@ public class WaiterController {
         CurrentUser currentUser = (CurrentUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         UserEntity userEntity = currentUser.getUserEntity();
         map.addAttribute("waiter", userEntity);
-        List<TableEntity> waiterTables = tableService.getTablesByWaiterId(userEntity.getId());
+        List<TableEntity> waiterTables = tableService.getTablesByUserId(userEntity.getId());
         Set<OrderEntity> tableOrders = new HashSet<>();
         Set<ProductInOrderEntity> productInOrderEntities = new HashSet<>();
 

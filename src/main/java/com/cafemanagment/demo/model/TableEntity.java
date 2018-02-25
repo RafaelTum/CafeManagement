@@ -11,8 +11,8 @@ public class TableEntity {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "waiter_id", insertable = false, updatable = false)
-    private UserEntity waiter;
+    @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    private UserEntity user;
 
     public long getId() {
         return id;
@@ -22,12 +22,12 @@ public class TableEntity {
         this.id = id;
     }
 
-    public UserEntity getWaiter() {
-        return waiter;
+    public UserEntity getUser() {
+        return user;
     }
 
-    public void setWaiter(UserEntity waiter) {
-        this.waiter = waiter;
+    public void setUser(UserEntity user) {
+        this.user = user;
     }
 
     @Override
@@ -38,13 +38,13 @@ public class TableEntity {
         TableEntity that = (TableEntity) o;
 
         if (id != that.id) return false;
-        return waiter != null ? waiter.equals(that.waiter) : that.waiter == null;
+        return user != null ? user.equals(that.user) : that.user == null;
     }
 
     @Override
     public int hashCode() {
         int result = (int) (id ^ (id >>> 32));
-        result = 31 * result + (waiter != null ? waiter.hashCode() : 0);
+        result = 31 * result + (user != null ? user.hashCode() : 0);
         return result;
     }
 }

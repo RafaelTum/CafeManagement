@@ -2,7 +2,8 @@
 SQLyog Ultimate v12.09 (64 bit)
 MySQL - 5.7.18-log : Database - cafe_manager
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -100,7 +101,7 @@ CREATE TABLE `user` (
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`name`,`surname`,`username`,`password`,`role`) values (1,'manager','manager','manager','manager','MANAGER'),(2,'waiter','waiter','waiter','waiter','WAITER');
+insert  into `user`(`id`,`name`,`surname`,`username`,`password`,`role`) values (1,'manager','manager','manager','manager','MANAGER'),(2,'user','user','user','user','WAITER');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

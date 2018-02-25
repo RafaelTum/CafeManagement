@@ -25,10 +25,10 @@
     <h2>Update Table</h2>
     <form:form action="/manager/table/update/${table.id}">
         <div class="form-group">
-            <label for="waiter">Please select an waiter:</label>
-            <select class="form-control" id="waiter" name="waiter">
-                <c:forEach items="${waiters}" var="waiter">
-                    <option name="name">${waiter.name}</option>
+            <label for="user">Please select an user:</label>
+            <select class="form-control" id="user" name="name">
+                <c:forEach items="${waiters}" var="user">
+                    <option name="name">${user.name}</option>
                 </c:forEach>
             </select>
             <button type="submit" class="btn btn-sm btn-success">Update</button>

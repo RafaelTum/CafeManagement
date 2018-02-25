@@ -55,7 +55,7 @@ public class ManagerController {
     public String addTable(@RequestParam("name") String name) {
         TableEntity table = new TableEntity();
         UserEntity waiter = userService.getUserByName(name);
-        table.setWaiter(waiter);
+        table.setUser(waiter);
         tableService.add(table);
         return "redirect:/manager";
     }
@@ -71,8 +71,8 @@ public class ManagerController {
     public String updateTable(@PathVariable(name = "id") long id, @RequestParam String name) {
         TableEntity table = tableService.getById(id);
         UserEntity waiter = userService.getUserByName(name);
-        table.setWaiter(waiter);
-        tableService.add(table);
+        table.setUser(waiter);
+        tableService.updateTable(table);
         return "redirect:/manager";
     }
 

@@ -22,7 +22,7 @@
 <body>
 
     <h2>Create New Waiter</h2>
-    <form:form action="/manager/waiter/add">
+    <form:form action="/manager/user/add">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name:"/>

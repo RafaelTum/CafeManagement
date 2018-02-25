@@ -29,12 +29,16 @@ public class TableServiceImpl implements TableService {
     }
 
     @Override
-    public List<TableEntity> getTablesByWaiterId(long waiterId) {
-        return tableRepository.findAllByWaiterId(waiterId);
+    public List<TableEntity> getTablesByUserId(long userId) {
+        return tableRepository.findAllByUserId(userId);
     }
 
     @Override
     public TableEntity getById(long id) {
         return tableRepository.findOne(id);
+    }
+
+    public void updateTable(TableEntity tableEntity){
+        tableRepository.updateTable(tableEntity.getUser(), tableEntity.getId());
     }
 }

@@ -1,6 +1,7 @@
 package com.cafemanagment.demo.service;
 
 import com.cafemanagment.demo.model.TableEntity;
+import com.cafemanagment.demo.model.UserEntity;
 
 import java.util.List;
 
@@ -12,8 +13,10 @@ public interface TableService {
 
     public List<TableEntity> getAll();
 
-    public List<TableEntity> getTablesByWaiterId(long waiterId);
+    public List<TableEntity> getTablesByUserId(long userId);
 
     public TableEntity getById(long id);
+
+    public void updateTable(TableEntity tableEntity);
 
 }

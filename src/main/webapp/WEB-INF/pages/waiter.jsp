@@ -34,7 +34,7 @@
             <c:forEach var="table" items="${tables}">
             <tr>
                 <td>${table.id}</td>
-                <td><a href="waiter/order/add/${table.id}"><button type="submit" class="btn btn-sm btn-success"> Add order</button></a> </td>
+                <td><a href="user/order/add/${table.id}"><button type="submit" class="btn btn-sm btn-success"> Add order</button></a> </td>
             </tr>
             </c:forEach>
             </tbody>
@@ -57,7 +57,7 @@
                 <td>${productInOrder.id}</td>
                 <td>${productInOrder.getProduct.name}</td>
                 <td>${productInOrder.count}</td>
-                <td ><a href="/waiter/add/product/${productInOrder.order.id}"><button>Add Product</button></a></td>
+                <td ><a href="/user/add/product/${productInOrder.order.id}"><button>Add Product</button></a></td>
             </tr>
         </c:forEach>
         </tbody>

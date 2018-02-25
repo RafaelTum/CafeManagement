@@ -24,7 +24,7 @@
 <div class="col-sm-8">
     <div class="pull-right">
         <ul class="nav navbar-nav">
-            <li><a href="/manager/create/waiter"><i class="fa fa-lock"></i> Create User</a></li>
+            <li><a href="/manager/create/user"><i class="fa fa-lock"></i> Create User</a></li>
             <li><a href="/manager/create/table"><i class="fa fa-lock"></i> Create Table</a></li>
             <li><a href="/logout"><i class="fa fa-lock"></i> Logout</a></li>
 
@@ -44,11 +44,11 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${waiters}" var="waiter">
+    <c:forEach items="${waiters}" var="user">
         <tr>
-            <td>${waiter.name}</td>
-            <td>${waiter.surname}</td>
-            <td><a href="/manager/waiter/delete/${waiter.id}" type="button" class="btn btn-sm btn-danger">delete</a></td>
+            <td>${user.name}</td>
+            <td>${user.surname}</td>
+            <td><a href="/manager/user/delete/${user.id}" type="button" class="btn btn-sm btn-danger">delete</a></td>
         </tr>
     </c:forEach>
     </tbody>
@@ -68,7 +68,7 @@
     <c:forEach items="${tables}" var="table">
         <tr>
             <td>${table.id}</td>
-            <td>${table.waiter.name}</td>
+            <td>${table.user.name}</td>
             <td><a href="/manager/update/table/${table.id}" type="button" class="btn btn-sm btn-warning">update table</a></td>
             </a></td>
         </tr>
@@ -77,7 +77,7 @@
 </table>
 <br><br>
     <h2>Create New Product</h2>
-<form:form action="/manager/create/product">
+<form:form action="/manager/product/add">
     <div class="form-group">
         <label for="name">Name:</label>
         <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name:"/>
